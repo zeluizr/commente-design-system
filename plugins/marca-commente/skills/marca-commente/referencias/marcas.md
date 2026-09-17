@@ -115,16 +115,22 @@ slug `ebanner` · mascote: **pendente** (sem mascote definida)
 | papel | cor | hex |
 |---|---|---|
 | Ladrillo e logotipo | Azul | `#005278` |
-| Acento, ponto sobre azul | Ámbar | `#F2A65A` |
-| Ponto sobre branco | Ámbar oscuro | `#D9843A` |
+| Acento, ponto sobre azul | Naranja | `#F59331` |
+| Ponto sobre branco | Naranja oscuro | `#B85F0E` |
 
 **Tratamento**
 - Sobre branco → logotipo em Azul `#005278`.
 - Sobre cor própria → acento claro: logotipo em Azul `#005278`, **nunca em branco**.
-- Ponto → Ámbar oscuro `#D9843A` no claro · Ámbar `#F2A65A` no escuro.
+- Ponto → Naranja oscuro `#B85F0E` no claro · Naranja `#F59331` no escuro.
 
-Divide a paleta com inmplementa.me — o âmbar é o mesmo. O que separa as duas é o isologo,
-que ainda não existe: ebanner.me não tem nenhum SVG.
+⚠️ **O naranja é proposta, para a v1.1.** O manual v1.0 dava a ebanner.me o mesmo ámbar de
+inmplementa.me, porque a marca ainda não estava definida. Com as duas definidas, o acento
+compartilhado deixava as duas indistinguíveis fora do isologo — o naranja separa. Está
+implementado nos tokens e marcado como proposta até a titularidade aprovar.
+
+O isologo já existe: um marco de banner com um bloco de imagem e três linhas de texto,
+em `assets/svg/icon-ebanner.svg`. O lockup original entregue pelo dono da marca está em
+`referencias/ebanner-lockup-original.png`.
 
 ---
 
@@ -183,4 +189,5 @@ marca. "Distintos ofícios, o mesmo olhar" — cada produto tem uma mascote com 
 ## Acentos claros, em uma frase
 
 Sobre fundo branco, o ponto quadrado dos acentos claros usa a versão escura:
-gris `#8E9296`, azul claro `#2E86AE`, lavanda `#7A68E6`, ámbar `#D9843A`.
+gris `#8E9296`, azul claro `#2E86AE`, lavanda `#7A68E6`, ámbar `#D9843A`,
+naranja `#B85F0E`.

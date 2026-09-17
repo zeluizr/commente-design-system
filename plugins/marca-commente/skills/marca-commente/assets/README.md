@@ -46,18 +46,21 @@ module.exports = { presets: [require('./tailwind.preset.js')] }
 | hablecon | ✅ | ✅ | — | — |
 | inmplementa | ✅ | ✅ | — | — |
 | reportam | ✅ | ✅ | — | — |
+| ebanner | ✅ | ✅ | — | — |
 | llmbattle | ✅ | ✅ | — | — |
 | smlk | ✅ | ✅ | — | — |
-| **ebanner** | — | — | — | — |
 
-Mais: `family-icons.svg` e `family-icons-dark.svg` (oito ladrillos — falta ebanner) e
-`grade-construcao.svg` (a grade do capítulo 02, com as cotas).
+Mais: `family-icons.svg` e `family-icons-dark.svg` (os nove ladrillos, na ordem de
+`referencias/marcas.md`) e `grade-construcao.svg` (a grade do capítulo 02, com as cotas).
 
-**O que falta:** as variantes `-dark` e `-onaccent` só existem para commente.me, e
-**ebanner.me não tem nenhum arquivo** — ela é membro oficial desde 17/09/2026, mas o
-artifact de origem trazia só oito marcas, então nem o ladrillo dela nem o lugar dela em
-`family-icons.svg` existem ainda. Para as outras marcas sobre fundo colorido, componha a
-partir do `-light` aplicando a regra de tratamento em `referencias/marcas.md`.
+**O que falta:** as variantes `-dark` e `-onaccent` só existem para commente.me. Para as
+outras marcas sobre fundo colorido, componha a partir do `-light` aplicando a regra de
+tratamento em `referencias/marcas.md`.
+
+O lockup de ebanner.me foi composto a partir dos glifos de Barlow já em curvas nos lockups
+normativos (`hablecon` e `reportam`), com a mesma métrica: avanço por glifo, `3,43`
+antes do ponto quadrado e `1,98` depois. O modelo foi conferido reconstruindo `reportam`
+e `hablecon` do zero — bate posição por posição com os arquivos originais.
 
 ## Conferência de cores
 

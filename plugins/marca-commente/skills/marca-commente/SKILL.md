@@ -65,7 +65,8 @@ Detalhe de cada uma — são sete, com a do tema escuro: `referencias/usos-incor
 | Rosa | `#FF245E` | funcional: erros e alertas |
 | Guayaba | `#FF5757` | funcional: avisos |
 | Lavanda | `#9B8CFF` | extensão, llmbattle.dev |
-| Ámbar | `#F2A65A` | extensão, inmplementa.me e ebanner.me |
+| Ámbar | `#F2A65A` | extensão, inmplementa.me |
+| Naranja | `#F59331` | extensão, ebanner.me — **proposta v1.1** |
 | Azul claro | `#7FBBD8` | extensão, reportam.me |
 | Gris | `#CCCCCC` | smlk.me, bordas e inativos |
 
@@ -110,7 +111,7 @@ em `referencias/marcas.md`. Resumo:
 | hablecon.app | `#005278` | `#40B0B8` | — | o operador |
 | inmplementa.me | `#005278` | `#F2A65A` | `#D9843A` | o mestre |
 | reportam.me | `#005278` | `#7FBBD8` | `#2E86AE` | o analista |
-| ebanner.me | `#005278` | `#F2A65A` | `#D9843A` | pendente |
+| ebanner.me | `#005278` | `#F59331` | `#B85F0E` | pendente |
 | llmbattle.dev | `#005278` | `#9B8CFF` | `#7A68E6` | pendente |
 | smlk.me | `#005278` | `#CCCCCC` | `#8E9296` | o enlaçador |
 
@@ -142,25 +143,32 @@ svg/lockup-<marca>-light.svg      logotipo sobre branco
 svg/lockup-<marca>-dark.svg       negativo sobre a cor base
 svg/lockup-<marca>-onaccent.svg   sobre o acento
 svg/icon-<marca>.svg              ladrillo 100×100, raio 22 — favicon, app icon, avatar
-svg/family-icons.svg              os oito símbolos juntos
+svg/family-icons.svg              os nove símbolos juntos
 ```
 
 Os arquivos reais estão em `assets/svg/`. O inventário — e o que ainda falta — está em
-`assets/README.md`: hoje só commente.me tem as três variantes de lockup, e ebanner.me não
-tem nenhum arquivo. Para as outras marcas sobre fundo colorido, componha a partir do
-`-light` seguindo o tratamento em `referencias/marcas.md`.
+`assets/README.md`: as nove marcas têm ladrillo e lockup `-light`, e só commente.me tem as
+três variantes. Para as outras sobre fundo colorido, componha a partir do `-light`
+seguindo o tratamento em `referencias/marcas.md`.
 
 ## Estado do manual
 
 A família tem **nove** marcas. O PDF de 16/09/2026 lista ebanner.me e o artifact da mesma
 data lista llmbattle.dev no lugar dela; em 17/09/2026 a titularidade da marca decidiu que
-**as duas entram**. Esta skill é a fonte mais completa — o artifact mostra oito, e o design system de
-17/09 ainda marca as duas como "provisional", o que essa decisão já superou.
+**as duas entram**. Esta skill é a fonte mais completa — o artifact mostra oito, e o
+design system de 17/09 ainda marca as duas como "provisional", o que essa decisão já
+superou.
+
+Em 17/09/2026 ebanner.me ganhou isologo, lockup e lugar em `family-icons.svg`, e com eles
+um acento próprio: o naranja `#F59331` / `#B85F0E`. É **proposta para a v1.1** — o manual
+v1.0 dava a ela o mesmo ámbar de inmplementa.me, e duas marcas definidas não dividem
+acento. Implementado nos tokens e marcado como proposta até a titularidade aprovar.
 
 Falta, e é trabalho de design, não de decisão:
 
-- ebanner.me não tem nenhum SVG, e não aparece em `family-icons.svg`.
 - llmbattle.dev não tem página própria no manual. O tratamento dela aqui segue a regra dos
   acentos claros, que é a que a nota de acentos do manual aplica à lavanda.
+- ebanner.me e llmbattle.dev seguem sem mascote.
 - As variantes `-dark` e `-onaccent` de lockup só existem para commente.me.
 - A escala escura de superfícies é proposta, à espera de aprovação.
+- O naranja de ebanner.me é proposta, à espera de aprovação.

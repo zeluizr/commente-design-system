@@ -11,12 +11,14 @@ module.exports = {
         "guayaba": "#FF5757",
         "lavanda": "#9B8CFF",
         "ambar": "#F2A65A",
+        "naranja": "#F59331",
         "azul-claro": "#7FBBD8",
         "gris": "#CCCCCC",
         "gris-oscuro": "#8E9296",
         "azul-medio": "#2E86AE",
         "lavanda-oscura": "#7A68E6",
         "ambar-oscuro": "#D9843A",
+        "naranja-oscuro": "#B85F0E",
         "ciruela": "#2A2438",
         "rosa-integram": "#FF41B4",
         "violeta": "#A463F2",
@@ -82,9 +84,9 @@ module.exports = {
                 },
                 "ebanner": {
                         "base": "#005278",
-                        "acento": "#F2A65A",
-                        "acento-escuro": "#D9843A",
-                        "ponto": "#D9843A",
+                        "acento": "#F59331",
+                        "acento-escuro": "#B85F0E",
+                        "ponto": "#B85F0E",
                         "logo-sobre-cor": "#005278"
                 },
                 "llmbattle": {

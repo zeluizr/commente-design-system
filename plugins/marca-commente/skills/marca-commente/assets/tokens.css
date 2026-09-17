@@ -17,7 +17,8 @@
   --rosa:        #FF245E;  /* funcional: erros e alertas */
   --guayaba:     #FF5757;  /* funcional: avisos */
   --lavanda:     #9B8CFF;  /* extensão, llmbattle.dev */
-  --ambar:       #F2A65A;  /* extensão, inmplementa.me e ebanner.me */
+  --ambar:       #F2A65A;  /* extensão, inmplementa.me */
+  --naranja:     #F59331;  /* extensão, ebanner.me — PROPOSTA v1.1 */
   --azul-claro:  #7FBBD8;  /* extensão, reportam.me */
   --gris:        #CCCCCC;  /* smlk.me, bordas e inativos */
 
@@ -26,6 +27,7 @@
   --azul-medio:     #2E86AE;
   --lavanda-oscura: #7A68E6;
   --ambar-oscuro:   #D9843A;
+  --naranja-oscuro: #B85F0E;  /* PROPOSTA v1.1 */
 
   /* cores de identidade própria (integram.me e inmmerce) */
   --ciruela:          #2A2438;
@@ -145,12 +147,14 @@
   --marca-logo-sobre-cor: var(--azul);
 }
 
+/* PROPOSTA v1.1: acento próprio. O manual v1.0 dava a ebanner.me o mesmo ámbar de
+   inmplementa.me; com as duas marcas definidas, o naranja separa as duas. */
 [data-marca="ebanner"] {
   --marca-base:           var(--azul);
-  --marca-acento:         var(--ambar);
-  --marca-acento-escuro:  var(--ambar-oscuro);
-  --marca-ponto:          var(--ambar-oscuro);
-  --marca-logo-sobre-cor: var(--azul);
+  --marca-acento:         var(--naranja);
+  --marca-acento-escuro:  var(--naranja-oscuro);
+  --marca-ponto:          var(--naranja-oscuro);  /* sobre branco */
+  --marca-logo-sobre-cor: var(--azul);            /* acento claro: nunca em branco */
 }
 
 [data-marca="llmbattle"] {

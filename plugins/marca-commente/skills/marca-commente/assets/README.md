@@ -6,12 +6,16 @@ Arquivos prontos para copiar no projeto. Baixados do artifact
 | arquivo | o que é |
 |---|---|
 | `tokens.json` | **fonte da verdade.** Paleta, tipografia, geometria e as nove marcas |
-| `tokens.css` | custom properties + `[data-marca="<slug>"]` + tema escuro (`[data-tema]` e `prefers-color-scheme`) + classes `.marca`, `.marca__ponto`, `.ladrillo`, `.sobre-cor`, `.sobre-acento` |
+| `tokens.css` | custom properties + `[data-marca="<slug>"]` + `[data-superficie="noche"]` + classes `.marca`, `.marca__ponto`, `.ladrillo`, `.sobre-cor`, `.sobre-acento` |
 | `tokens.scss` | variáveis Sass + mapa `$marcas` + função `marca($slug, $token)` — **gerado** |
 | `tailwind.preset.js` | preset com cores, pesos, tracking e `rounded-ladrillo` — **gerado** |
 | `gerar.mjs` | regenera `tokens.scss` e `tailwind.preset.js` a partir de `tokens.json` |
-| `barlow.html` | snippet do Google Fonts + favicon |
+| `barlow.html` | snippet do Google Fonts (Barlow 700/900) + favicon |
 | `svg/` | lockups, ladrillos e a grade de construção |
+
+`tokens.json` traz ainda os blocos `superficie-noche` (a superfície de llmbattle.dev) e
+`acessibilidade` (a regra de contraste), que o gerador não deriva mas o `tokens.css`
+aplica.
 
 Mexeu em cor ou marca? Edite **só** `tokens.json` e rode:
 
@@ -25,7 +29,7 @@ node ~/.claude/skills/marca-commente/assets/gerar.mjs
 
 ```html
 <html data-marca="reportam">          <!-- marca do projeto -->
-<html data-marca="reportam" data-tema="escuro">   <!-- força o tema; sem isso segue o sistema -->
+<html data-marca="llmbattle" data-superficie="noche">  <!-- só llmbattle.dev tem noche -->
   <link rel="stylesheet" href="/css/tokens.css">
   <link rel="icon" type="image/svg+xml" href="/svg/icon-reportam.svg">
 ```
@@ -33,7 +37,7 @@ node ~/.claude/skills/marca-commente/assets/gerar.mjs
 ```js
 // tailwind.config.js
 module.exports = { presets: [require('./tailwind.preset.js')] }
-// depois: bg-marca-reportam-base, text-azul, bg-escuro-superficie, rounded-ladrillo
+// depois: bg-marca-reportam-base, text-azul, bg-noche, font-display, rounded-ladrillo
 ```
 
 ## Inventário de `svg/`
@@ -47,11 +51,11 @@ module.exports = { presets: [require('./tailwind.preset.js')] }
 | inmplementa | ✅ | ✅ | ✅ | ✅ | ✅ |
 | reportam | ✅ | ✅ | ✅ | ✅ | ✅ |
 | ebanner | ✅ | ✅ | ✅ | ✅ | ✅ |
-| llmbattle | ✅ | ✅ | ✅ | ✅ | — |
+| llmbattle | ✅ | ✅ | ✅ | ✅ | ✅ |
 | smlk | ✅ | ✅ | ✅ | ✅ | ✅ |
 
-**O inventário está completo**: as nove marcas têm ladrillo e as três variantes de lockup.
-Só a mascote de llmbattle.dev ainda não existe.
+**O inventário está completo**: as nove marcas têm ladrillo, as três variantes de lockup e
+mascote. Nada em falta.
 
 Mais: `family-icons.svg` e `family-icons-dark.svg` (os nove ladrillos, na ordem de
 `referencias/marcas.md`) e `grade-construcao.svg` (a grade do capítulo 02, com as cotas).
@@ -74,10 +78,16 @@ Duas exceções, geradas aqui e não desenhadas:
 
 ## Mascotes
 
-`mascotes/<slug>.png` — 512×512, fundo transparente, PNG de cor plena. Os originais do
-bundle são 1254×1254 e somam 9,2 MB; aqui somam 1,8 MB. A redução é só de dimensão, sem
-quantização de cor: no tamanho em que as mascotes aparecem (cerca de 150 px), 512 cobre
-3× retina.
+`mascotes/<slug>.png` — 512×512, fundo transparente, PNG de cor plena. As nove, uma por
+marca. Os originais são 1254×1254 e somam 10,6 MB; aqui somam 2,1 MB. A redução é só de
+dimensão, sem quantização de cor: no tamanho em que as mascotes aparecem (cerca de 150 px),
+512 cobre 3× retina.
+
+A de llmbattle.dev veio no kit v1.2, de 17/09/2026; as outras oito vieram do bundle do
+Claude Design do mesmo dia.
+
+**Nunca use mascote como logotipo, favicon, app icon ou avatar** — esse lugar é do
+ladrillo.
 
 ## Conferência de cores
 

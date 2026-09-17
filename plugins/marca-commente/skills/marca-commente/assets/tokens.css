@@ -1,7 +1,6 @@
 /* ===========================================================================
    Família commente.me — tokens de marca
-   Guía de la familia commente.me, v1.0 · setembro de 2026
-   Fonte: https://claude.ai/artifact/FFAEEvu5HrsfmPJQWt55p1
+   Guía de la familia commente.me, v1.2 · setembro de 2026
 
    Uso:
      <html data-marca="commente"> ... </html>
@@ -18,7 +17,7 @@
   --guayaba:     #FF5757;  /* funcional: avisos */
   --lavanda:     #9B8CFF;  /* extensão, llmbattle.dev */
   --ambar:       #F2A65A;  /* extensão, inmplementa.me */
-  --verde-ebanner: #63CB76; /* extensão, ebanner.me */
+  --jade:        #63CB76;  /* primário, ebanner.me */
   --azul-claro:  #7FBBD8;  /* extensão, reportam.me */
   --gris:        #CCCCCC;  /* smlk.me, bordas e inativos */
 
@@ -27,7 +26,8 @@
   --azul-medio:     #2E86AE;
   --lavanda-oscura: #7A68E6;
   --ambar-oscuro:   #D9843A;
-  --verde-ebanner-oscuro: #2C9145;
+  --jade-oscuro:    #2C9145;
+  --amarillo-inmmerce-oscuro: #956E00;  /* as letras "in" sobre branco */
 
   /* cores de identidade própria (integram.me e inmmerce) */
   --ciruela:          #2A2438;
@@ -43,18 +43,10 @@
   --tinta:       #1A1A1A;
   --texto-suave: #5C6D75;
 
-  /* --- superfícies, escala escura (PROPOSTA; só o escenario é fechado) ---- */
-  --escenario:          #0B1C26;
-  --escuro-superficie:  #12303D;
-  --escuro-superficie-2:#173A49;
-  --escuro-borde:       #245265;
-  --escuro-texto:       #E8F1F5;
-  --escuro-texto-suave: #9DB6C2;
+  /* --- escenario: fundo de apresentação e capa, não tema de produto --- */
+  --escenario: #0B1C26;
 
-  /* rosa funcional sobre superfície escura: sobe no texto, borda fica plena */
-  --rosa-texto-escuro: #FF6C8E;
-
-  /* --- superfícies em uso: trocam com o tema ----------------------------- */
+  /* --- superfícies em uso. Tema único: claro. --------------------------- */
   --fundo:       var(--papel);
   --superficie:  var(--papel-gris);
   --superficie-2:var(--papel);
@@ -64,12 +56,13 @@
   --erro-texto:  var(--rosa);
   --ladrillo-borda: transparent;
 
-  /* --- tipografia ------------------------------------------------------- */
-  --fonte: Barlow, "Helvetica Neue", Arial, sans-serif;
-  --peso-titulo: 900;   /* Black */
-  --peso-forte:  700;   /* Bold — logotipo e subtítulos */
-  --peso-ui:     500;   /* Medium */
-  --peso-texto:  300;   /* Light */
+  /* --- tipografia: duas famílias, fronteiras fechadas ------------------ */
+  --fonte-display: Barlow, "Helvetica Neue", Arial, sans-serif;
+  --fonte-texto:   Arial, Helvetica, sans-serif;
+  --peso-titulo:      900;  /* Barlow Black — título */
+  --peso-forte:       700;  /* Barlow Bold — logotipo e subtítulo */
+  --peso-texto:       400;  /* Arial Regular — corpo e interface */
+  --peso-texto-forte: 700;  /* Arial Bold — ênfase e rótulo */
 
   --tracking-logotipo: -0.02em;  /* −2% */
   --tracking-titulo:   -0.03em;
@@ -151,9 +144,9 @@
    Valor do "Design System · Familia" de 17/09/2026. */
 [data-marca="ebanner"] {
   --marca-base:           var(--azul);
-  --marca-acento:         var(--verde-ebanner);
-  --marca-acento-escuro:  var(--verde-ebanner-oscuro);
-  --marca-ponto:          var(--verde-ebanner-oscuro);  /* sobre branco */
+  --marca-acento:         var(--jade);
+  --marca-acento-escuro:  var(--jade-oscuro);
+  --marca-ponto:          var(--jade-oscuro);  /* sobre branco */
   --marca-logo-sobre-cor: var(--azul);                  /* acento claro: nunca em branco */
 }
 
@@ -196,7 +189,7 @@
    =========================================================================== */
 
 .marca {
-  font-family: var(--fonte);
+  font-family: var(--fonte-display);
   font-weight: var(--peso-forte);
   letter-spacing: var(--tracking-logotipo);
   text-transform: lowercase;
@@ -217,65 +210,64 @@
   background: var(--marca-base);
 }
 
-/* ===========================================================================
-   TEMA ESCURO — PROPOSTA (Design System · Familia de marcas, 17/09/2026).
-   Só `--escenario` é fechado pelo manual; o resto da escala aguarda aprovação.
-
-   As quatro regras, e nada além delas muda:
-     01  O azul sai do fundo. As superfícies vêm da escala neutra; o azul fica
-         como realce: bordas, ícones, estados.
-     02  O acento leva a ação. O botão primário passa a acento pleno, com texto
-         em tinta ou em branco conforme o acento.
-     03  O ponto usa o acento claro. No escuro o ponto volta ao acento pleno —
-         a versão escura do acento não se usa aqui.
-     04  O ladrillo não se clareia. Mantém a cor base e ganha borda de 1px.
-   =========================================================================== */
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-tema="claro"]) {
-    --fundo:        var(--escenario);
-    --superficie:   var(--escuro-superficie);
-    --superficie-2: var(--escuro-superficie-2);
-    --linha:        var(--escuro-borde);
-    --texto:        var(--escuro-texto);
-    --texto-fraco:  var(--escuro-texto-suave);
-    --erro-texto:   var(--rosa-texto-escuro);
-    --ladrillo-borda: var(--escuro-borde);
-    --marca-ponto:  var(--marca-acento);   /* regra 03 */
-  }
-}
-
-:root[data-tema="escuro"] {
-  --fundo:        var(--escenario);
-  --superficie:   var(--escuro-superficie);
-  --superficie-2: var(--escuro-superficie-2);
-  --linha:        var(--escuro-borde);
-  --texto:        var(--escuro-texto);
-  --texto-fraco:  var(--escuro-texto-suave);
-  --erro-texto:   var(--rosa-texto-escuro);
-  --ladrillo-borda: var(--escuro-borde);
-  --marca-ponto:  var(--marca-acento);     /* regra 03 */
-}
-
 body {
   background: var(--fundo);
   color: var(--texto);
-  font-family: var(--fonte);
+  font-family: var(--fonte-texto);
+  font-weight: var(--peso-texto);
 }
 
-/* Regra 04: o ladrillo nunca clareia; ganha a borda para descolar do fundo. */
+/* ===========================================================================
+   SUPERFÍCIE NOCHE — só llmbattle.dev.
+   Guía de la familia commente.me, v1.2.
+
+   O sistema tem UM tema: claro. A noche não é tema — é a superfície própria de
+   uma marca, porque o contexto de llmbattle.dev é técnico: compara-se modelo,
+   lê-se código, olha-se por muito tempo. Não se empresta às outras oito.
+
+     <html data-marca="llmbattle" data-superficie="noche">
+
+   Matiz 287°, o mesmo da lavanda, com luminosidade 0,30 — bem mais claro que
+   um preto, para o ladrillo azul não afundar no fundo.
+
+   As quatro regras:
+     01  O ladrillo mantém o azul #005278 e ganha borda #423F63.
+     02  O ponto passa à lavanda plena, nunca à versão escura.
+     03  A ação vai em lavanda com texto em tinta.
+     04  O texto de acento usa --noche-acento-texto, não a lavanda de
+         preenchimento: #9B8CFF sobre a noche elevada dá 4,4:1 e não passa.
+   =========================================================================== */
+
+:root {
+  --noche:              #2C2B40;
+  --noche-elevada:      #35334B;
+  --noche-borde:        #423F63;
+  --noche-texto:        #F1F1FA;
+  --noche-texto-suave:  #AFAEC7;
+  --noche-acento-texto: #A59AFF;
+}
+
+[data-superficie="noche"] {
+  --fundo:        var(--noche);
+  --superficie:   var(--noche-elevada);
+  --superficie-2: var(--noche-elevada);
+  --linha:        var(--noche-borde);
+  --texto:        var(--noche-texto);
+  --texto-fraco:  var(--noche-texto-suave);
+  --ladrillo-borda: var(--noche-borde);   /* regra 01 */
+  --marca-ponto:  var(--marca-acento);    /* regra 02 */
+  --acento-texto: var(--noche-acento-texto);  /* regra 04 */
+
+  background: var(--fundo);
+  color: var(--texto);
+}
+
+/* Regra 01: o ladrillo nunca clareia; a borda é que o descola do fundo. */
 .ladrillo {
   border: 1px solid var(--ladrillo-borda);
 }
 
-/* Regra 01: no escuro o logotipo em texto assume a cor do texto, não o azul —
-   o azul institucional deixa de ser fundo e vira realce. */
-:root[data-tema="escuro"] .marca {
+/* Sobre a noche o logotipo em texto assume a cor do texto. */
+[data-superficie="noche"] .marca {
   color: var(--texto);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-tema="claro"]) .marca {
-    color: var(--texto);
-  }
 }

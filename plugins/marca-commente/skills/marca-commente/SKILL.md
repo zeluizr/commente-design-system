@@ -155,8 +155,9 @@ seguindo o tratamento em `referencias/marcas.md`.
 
 A família tem **nove** marcas. O PDF de 16/09/2026 lista ebanner.me e o artifact da mesma
 data lista llmbattle.dev no lugar dela; em 17/09/2026 a titularidade da marca decidiu que
-**as duas entram**. Esta skill é a fonte mais completa — o artifact mostra oito, e o design system de
-17/09 ainda marca as duas como "provisional", o que essa decisão já superou.
+**as duas entram**. Esta skill é a fonte mais completa — o artifact mostra oito, e o
+design system de 17/09 ainda marca as duas como "provisional", o que essa decisão já
+superou.
 
 Em 17/09/2026 ebanner.me ganhou isologo, lockup e lugar em `family-icons.svg`, e com eles
 um acento próprio: o naranja `#F59331` / `#B85F0E`. É **proposta para a v1.1** — o manual

@@ -58,9 +58,9 @@ outras marcas sobre fundo colorido, componha a partir do `-light` aplicando a re
 tratamento em `referencias/marcas.md`.
 
 O lockup de ebanner.me foi composto a partir dos glifos de Barlow já em curvas nos lockups
-normativos (`hablecon` e `reportam`), com a mesma métrica: avanço por glifo, `3,43` antes do
-ponto quadrado e `1,98` depois. O modelo foi conferido reconstruindo `reportam` e
-`hablecon` do zero — bate posição por posição com os arquivos originais.
+normativos (`hablecon` e `reportam`), com a mesma métrica: avanço por glifo, `3,43`
+antes do ponto quadrado e `1,98` depois. O modelo foi conferido reconstruindo `reportam`
+e `hablecon` do zero — bate posição por posição com os arquivos originais.
 
 ## Conferência de cores
 

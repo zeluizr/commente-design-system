@@ -1,0 +1,277 @@
+/* ===========================================================================
+   Família commente.me — tokens de marca
+   Guía de la familia commente.me, v1.0 · setembro de 2026
+   Fonte: https://claude.ai/artifact/FFAEEvu5HrsfmPJQWt55p1
+
+   Uso:
+     <html data-marca="commente"> ... </html>
+   Os tokens --marca-* se resolvem para a marca do projeto. Nunca escreva o hex
+   solto no componente.
+   =========================================================================== */
+
+:root {
+  /* --- paleta institucional ---------------------------------------------- */
+  --azul:        #005278;  /* institucional, toda a família */
+  --verde:       #40B0B8;  /* primário, hablecon.app */
+  --amarillo:    #FFBD38;  /* primário, commente.me */
+  --rosa:        #FF245E;  /* funcional: erros e alertas */
+  --guayaba:     #FF5757;  /* funcional: avisos */
+  --lavanda:     #9B8CFF;  /* extensão, llmbattle.dev */
+  --ambar:       #F2A65A;  /* extensão, inmplementa.me e ebanner.me */
+  --azul-claro:  #7FBBD8;  /* extensão, reportam.me */
+  --gris:        #CCCCCC;  /* smlk.me, bordas e inativos */
+
+  /* versões escuras dos acentos claros — o ponto quadrado sobre branco */
+  --gris-oscuro:    #8E9296;
+  --azul-medio:     #2E86AE;
+  --lavanda-oscura: #7A68E6;
+  --ambar-oscuro:   #D9843A;
+
+  /* cores de identidade própria (integram.me e inmmerce) */
+  --ciruela:          #2A2438;
+  --rosa-integram:    #FF41B4;
+  --violeta:          #A463F2;
+  --indigo:           #3F3D56;
+  --amarillo-inmmerce:#F6C92D;
+
+  /* --- superfícies, escala clara (fechada pelo manual) -------------------- */
+  --papel:       #FFFFFF;
+  --papel-gris:  #F4F6F7;
+  --borde:       #DDE4E8;
+  --tinta:       #1A1A1A;
+  --texto-suave: #5C6D75;
+
+  /* --- superfícies, escala escura (PROPOSTA; só o escenario é fechado) ---- */
+  --escenario:          #0B1C26;
+  --escuro-superficie:  #12303D;
+  --escuro-superficie-2:#173A49;
+  --escuro-borde:       #245265;
+  --escuro-texto:       #E8F1F5;
+  --escuro-texto-suave: #9DB6C2;
+
+  /* rosa funcional sobre superfície escura: sobe no texto, borda fica plena */
+  --rosa-texto-escuro: #FF6C8E;
+
+  /* --- superfícies em uso: trocam com o tema ----------------------------- */
+  --fundo:       var(--papel);
+  --superficie:  var(--papel-gris);
+  --superficie-2:var(--papel);
+  --linha:       var(--borde);
+  --texto:       var(--tinta);
+  --texto-fraco: var(--texto-suave);
+  --erro-texto:  var(--rosa);
+  --ladrillo-borda: transparent;
+
+  /* --- tipografia ------------------------------------------------------- */
+  --fonte: Barlow, "Helvetica Neue", Arial, sans-serif;
+  --peso-titulo: 900;   /* Black */
+  --peso-forte:  700;   /* Bold — logotipo e subtítulos */
+  --peso-ui:     500;   /* Medium */
+  --peso-texto:  300;   /* Light */
+
+  --tracking-logotipo: -0.02em;  /* −2% */
+  --tracking-titulo:   -0.03em;
+  --tracking-eyebrow:   0.22em;
+
+  /* --- geometria do lockup ---------------------------------------------- */
+  --raio-ladrillo:  22%;     /* do lado x */
+  --simbolo-escala: 56%;     /* do lado x */
+  --respiro-lockup: 0.28;    /* × x, entre ladrillo e logotipo */
+  --altura-x-logo:  0.37;    /* × x */
+  --ponto-tamanho:  0.17em;  /* 17% do corpo */
+
+  /* --- fallback: commente.me, a marca mãe ------------------------------- */
+  --marca-base:          var(--azul);
+  --marca-acento:        var(--amarillo);
+  --marca-acento-escuro: var(--amarillo);
+  --marca-ponto:         var(--amarillo);
+  --marca-logo-sobre-cor: var(--papel);  /* branco */
+}
+
+/* ===========================================================================
+   Por marca. `--marca-ponto` é o valor do ponto quadrado sobre fundo branco;
+   `--marca-logo-sobre-cor` é a cor do logotipo quando o fundo é a cor própria.
+   =========================================================================== */
+
+[data-marca="commente"] {
+  --marca-base:           var(--azul);
+  --marca-acento:         var(--amarillo);
+  --marca-acento-escuro:  var(--amarillo);
+  --marca-ponto:          var(--amarillo);
+  --marca-logo-sobre-cor: var(--papel);
+  --marca-secundario:     var(--verde);
+  --marca-suporte:        var(--azul-claro);
+}
+
+[data-marca="integram"] {
+  --marca-base:           var(--ciruela);
+  --marca-acento:         var(--rosa-integram);
+  --marca-acento-escuro:  var(--rosa-integram);
+  --marca-ponto:          var(--rosa-integram);
+  --marca-logo-sobre-cor: var(--papel);
+  --marca-secundario:     var(--violeta);
+}
+
+[data-marca="inmmerce"] {
+  --marca-base:           var(--indigo);
+  --marca-acento:         var(--amarillo-inmmerce);
+  --marca-acento-escuro:  var(--amarillo-inmmerce);
+  --marca-ponto:          transparent;          /* sem ponto: o acento vive no "in" */
+  --marca-logo-sobre-cor: var(--indigo);        /* nunca em branco */
+}
+
+[data-marca="hablecon"] {
+  --marca-base:           var(--azul);
+  --marca-acento:         var(--verde);
+  --marca-acento-escuro:  var(--verde);
+  --marca-ponto:          var(--verde);
+  --marca-logo-sobre-cor: var(--papel);
+  --marca-suporte:        var(--azul-claro);
+}
+
+[data-marca="inmplementa"] {
+  --marca-base:           var(--azul);
+  --marca-acento:         var(--ambar);
+  --marca-acento-escuro:  var(--ambar-oscuro);
+  --marca-ponto:          var(--ambar-oscuro);  /* sobre branco */
+  --marca-logo-sobre-cor: var(--azul);          /* acento claro: nunca em branco */
+}
+
+[data-marca="reportam"] {
+  --marca-base:           var(--azul);
+  --marca-acento:         var(--azul-claro);
+  --marca-acento-escuro:  var(--azul-medio);
+  --marca-ponto:          var(--azul-medio);
+  --marca-logo-sobre-cor: var(--azul);
+}
+
+[data-marca="ebanner"] {
+  --marca-base:           var(--azul);
+  --marca-acento:         var(--ambar);
+  --marca-acento-escuro:  var(--ambar-oscuro);
+  --marca-ponto:          var(--ambar-oscuro);
+  --marca-logo-sobre-cor: var(--azul);
+}
+
+[data-marca="llmbattle"] {
+  --marca-base:           var(--azul);
+  --marca-acento:         var(--lavanda);
+  --marca-acento-escuro:  var(--lavanda-oscura);
+  --marca-ponto:          var(--lavanda-oscura);
+  --marca-logo-sobre-cor: var(--azul);
+}
+
+[data-marca="smlk"] {
+  --marca-base:           var(--azul);
+  --marca-acento:         var(--gris);
+  --marca-acento-escuro:  var(--gris-oscuro);
+  --marca-ponto:          var(--gris-oscuro);
+  --marca-logo-sobre-cor: var(--azul);
+}
+
+/* ===========================================================================
+   Sobre a cor própria: o ponto volta ao acento pleno e o logotipo assume
+   --marca-logo-sobre-cor. Aplique em qualquer bloco de fundo colorido.
+   =========================================================================== */
+
+.sobre-cor {
+  background: var(--marca-base);
+  color: var(--marca-logo-sobre-cor);
+  --marca-ponto: var(--marca-acento);
+}
+
+.sobre-acento {
+  background: var(--marca-acento);
+  color: var(--marca-logo-sobre-cor);
+  --marca-ponto: var(--marca-logo-sobre-cor);
+}
+
+/* ===========================================================================
+   O logotipo em texto. O ponto é elemento, não caractere.
+     <span class="marca">commente<i class="marca__ponto"></i>me</span>
+   =========================================================================== */
+
+.marca {
+  font-family: var(--fonte);
+  font-weight: var(--peso-forte);
+  letter-spacing: var(--tracking-logotipo);
+  text-transform: lowercase;
+  color: var(--marca-base);
+}
+
+.marca__ponto {
+  display: inline-block;
+  width: var(--ponto-tamanho);
+  height: var(--ponto-tamanho);
+  margin: 0 0.06em;
+  background: var(--marca-ponto);
+}
+
+.ladrillo {
+  aspect-ratio: 1;
+  border-radius: var(--raio-ladrillo);
+  background: var(--marca-base);
+}
+
+/* ===========================================================================
+   TEMA ESCURO — PROPOSTA (Design System · Familia de marcas, 17/09/2026).
+   Só `--escenario` é fechado pelo manual; o resto da escala aguarda aprovação.
+
+   As quatro regras, e nada além delas muda:
+     01  O azul sai do fundo. As superfícies vêm da escala neutra; o azul fica
+         como realce: bordas, ícones, estados.
+     02  O acento leva a ação. O botão primário passa a acento pleno, com texto
+         em tinta ou em branco conforme o acento.
+     03  O ponto usa o acento claro. No escuro o ponto volta ao acento pleno —
+         a versão escura do acento não se usa aqui.
+     04  O ladrillo não se clareia. Mantém a cor base e ganha borda de 1px.
+   =========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) {
+    --fundo:        var(--escenario);
+    --superficie:   var(--escuro-superficie);
+    --superficie-2: var(--escuro-superficie-2);
+    --linha:        var(--escuro-borde);
+    --texto:        var(--escuro-texto);
+    --texto-fraco:  var(--escuro-texto-suave);
+    --erro-texto:   var(--rosa-texto-escuro);
+    --ladrillo-borda: var(--escuro-borde);
+    --marca-ponto:  var(--marca-acento);   /* regra 03 */
+  }
+}
+
+:root[data-tema="escuro"] {
+  --fundo:        var(--escenario);
+  --superficie:   var(--escuro-superficie);
+  --superficie-2: var(--escuro-superficie-2);
+  --linha:        var(--escuro-borde);
+  --texto:        var(--escuro-texto);
+  --texto-fraco:  var(--escuro-texto-suave);
+  --erro-texto:   var(--rosa-texto-escuro);
+  --ladrillo-borda: var(--escuro-borde);
+  --marca-ponto:  var(--marca-acento);     /* regra 03 */
+}
+
+body {
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: var(--fonte);
+}
+
+/* Regra 04: o ladrillo nunca clareia; ganha a borda para descolar do fundo. */
+.ladrillo {
+  border: 1px solid var(--ladrillo-borda);
+}
+
+/* Regra 01: no escuro o logotipo em texto assume a cor do texto, não o azul —
+   o azul institucional deixa de ser fundo e vira realce. */
+:root[data-tema="escuro"] .marca {
+  color: var(--texto);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) .marca {
+    color: var(--texto);
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://code.claude.com/schemas/marketplace.json",
+  "name": "commente-design-system",
+  "owner": {
+    "name": "Jose Luiz",
+    "url": "https://github.com/zeluizr"
+  },
+  "description": "O sistema de marca da família commente.me: nove marcas, um universo.",
+  "version": "1.0.0",
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "marca-commente",
+      "source": "marca-commente",
+      "displayName": "Marca commente.me",
+      "description": "Paleta, tipografia Barlow, construção do lockup, temas claro e escuro e os sete usos proibidos das nove marcas da família commente.me.",
+      "version": "1.0.0",
+      "author": { "name": "Jose Luiz", "url": "https://github.com/zeluizr" },
+      "repository": "https://github.com/zeluizr/commente-design-system",
+      "license": "MIT",
+      "category": "design",
+      "keywords": ["design-system", "brand", "design-tokens", "barlow", "commente"]
+    }
+  ]
+}

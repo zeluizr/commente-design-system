@@ -110,23 +110,24 @@ slug `reportam` · mascote: **o analista** ("datos que hablan")
 ---
 
 ## 07 · ebanner.me — banners para lojas VTEX
-slug `ebanner` · mascote: **pendente** (sem mascote definida)
+slug `ebanner` · mascote: **o anunciante** ("banners que anunciam")
 
 | papel | cor | hex |
 |---|---|---|
 | Ladrillo e logotipo | Azul | `#005278` |
-| Acento, ponto sobre azul | Verde ebanner | `#63CB76` |
-| Ponto sobre branco | Verde ebanner oscuro | `#2C9145` |
+| Acento, ponto sobre azul | Jade | `#63CB76` |
+| Ponto sobre branco | Jade oscuro | `#2C9145` |
 
 **Tratamento**
 - Sobre branco → logotipo em Azul `#005278`.
 - Sobre cor própria → acento claro: logotipo em Azul `#005278`, **nunca em branco**.
-- Ponto → Verde ebanner oscuro `#2C9145` no claro · Verde ebanner `#63CB76` no escuro.
+- Ponto → Jade oscuro `#2C9145` sobre branco · Jade `#63CB76` sobre a cor base.
 
 O manual v1.0 dava a ebanner.me o mesmo ámbar de inmplementa.me, porque a marca ainda não
 estava definida. Com as duas definidas, o acento compartilhado deixava as duas
-indistinguíveis fora do isologo. O *Design System · Familia* de 17/09/2026 resolveu com o
-verde — que não se confunde com o verde `#40B0B8` de hablecon.app, mais azulado.
+indistinguíveis fora do isologo. A v1.2 fechou o jade: o matiz 148° é o único vão real da
+roda — entre o amarillo (80°) e o verde de hablecon.app (202°) —, então as duas marcas
+deixaram de depender do símbolo para se distinguir.
 
 O isologo é um marco de banner com um bloco de imagem e três linhas de texto, em
 `assets/svg/icon-ebanner.svg`. O lockup original entregue pelo dono da marca está em
@@ -135,7 +136,7 @@ O isologo é um marco de banner com um bloco de imagem e três linhas de texto, 
 ---
 
 ## 08 · llmbattle.dev — comparativa de modelos
-slug `llmbattle` · mascote: **pendente**
+slug `llmbattle` · mascote: **o árbitro** ("dois modelos, um veredicto")
 
 | papel | cor | hex |
 |---|---|---|
@@ -148,8 +149,9 @@ slug `llmbattle` · mascote: **pendente**
 - Sobre cor própria → acento claro: logotipo em Azul `#005278`, nunca em branco.
 - Ponto → Lavanda oscura `#7A68E6` no claro · Lavanda `#9B8CFF` no escuro.
 
-Entrou pelo artifact e ainda não tem página própria no manual: o tratamento acima segue a
-regra dos acentos claros, que é a que a nota de acentos do manual aplica à lavanda.
+**É a única marca da família com superfície própria: a noche `#2C2B40`.** O contexto dela é
+técnico — compara-se modelo, lê-se código, olha-se por muito tempo. Não é tema do sistema e
+não se empresta às outras oito. Ver `referencias/superficie-noche.md`.
 
 ---
 
@@ -174,24 +176,32 @@ slug `smlk` · mascote: **o enlaçador** ("enlaces más lejos")
 Regra comum: fundo transparente, corpo inteiro, sobre branco ou sobre o ladrillo da própria
 marca. "Distintos ofícios, o mesmo olhar" — cada produto tem uma mascote com seu ofício.
 
-| marca | mascote | ofício |
-|---|---|---|
-| commente.me | gato-peixe | um olho no peixe |
-| integram.me | polvo | uma só rede |
-| inmmerce | formado | escola de ecommerce |
-| hablecon.app | operador | sempre atento |
-| inmplementa.me | mestre | mãos à obra |
-| reportam.me | analista | dados que falam |
-| smlk.me | enlaçador | links mais longe |
-| ebanner.me | pendente | — |
-| llmbattle.dev | pendente | — |
+| marca | personagem | ofício | arquivo |
+|---|---|---|---|
+| commente.me | o gato-peixe | um olho no peixe | `commente.png` |
+| integram.me | o polvo | uma só rede | `integram.png` |
+| inmmerce | o formado | escola de ecommerce | `inmmerce.png` |
+| hablecon.app | o operador | sempre atento | `hablecon.png` |
+| inmplementa.me | o mestre | mãos à obra | `inmplementa.png` |
+| reportam.me | o analista | dados que falam | `reportam.png` |
+| ebanner.me | o anunciante | banners que anunciam | `ebanner.png` |
+| llmbattle.dev | o árbitro | dois modelos, um veredicto | `llmbattle.png` |
+| smlk.me | o enlaçador | links mais longe | `smlk.png` |
 
-As oito mascotes desenhadas estão em `assets/mascotes/<slug>.png` — 512×512, fundo
-transparente. A de ebanner.me já existe, mas o ofício dela segue pendente; llmbattle.dev
-é a única sem arte.
+**As nove têm mascote**, então nunca é preciso emprestar a de outro produto.
+
+Em `assets/mascotes/<slug>.png` — 512×512, PNG com alfa.
+
+Regras: fundo transparente, sobre branco, papel gris ou o ladrillo da própria marca · corpo
+inteiro, sem recorte nem enquadramento circular · a mascote de um produto não aparece na
+comunicação de outro · **nunca como logotipo** — não é favicon, nem app icon, nem avatar:
+esse lugar é do ladrillo.
 
 ## Acentos claros, em uma frase
 
 Sobre fundo branco, o ponto quadrado dos acentos claros usa a versão escura:
 gris `#8E9296`, azul claro `#2E86AE`, lavanda `#7A68E6`, ámbar `#D9843A`,
-verde ebanner `#2C9145`.
+jade `#2C9145`, amarillo inmmerce `#956E00`.
+
+Nenhum acento claro faz de cor de texto sobre branco. Ou vai como fundo, com o texto em
+`--sobre-acento`, ou usa a versão escura.

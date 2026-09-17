@@ -6,7 +6,7 @@
     "url": "https://github.com/zeluizr"
   },
   "description": "O sistema de marca da família commente.me: nove marcas, um universo.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "metadata": {
     "pluginRoot": "./plugins"
   },
@@ -16,7 +16,7 @@
       "source": "marca-commente",
       "displayName": "Marca commente.me",
       "description": "Paleta, tipografia Barlow, construção do lockup, temas claro e escuro e os sete usos proibidos das nove marcas da família commente.me.",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "author": { "name": "Jose Luiz", "url": "https://github.com/zeluizr" },
       "repository": "https://github.com/zeluizr/commente-design-system",
       "license": "MIT",

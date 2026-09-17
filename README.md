@@ -13,7 +13,7 @@ preset de Tailwind.
 [![último commit](https://badgen.net/github/last-commit/zeluizr/commente-design-system)](https://github.com/zeluizr/commente-design-system/commits)
 [![estrellas](https://badgen.net/github/stars/zeluizr/commente-design-system)](https://github.com/zeluizr/commente-design-system/stargazers)
 
-Versión 1.1.0, según `.claude-plugin/marketplace.json`.
+Versión 1.2.0, según `.claude-plugin/marketplace.json`.
 
 ---
 
@@ -80,7 +80,7 @@ Azul `#005278` es el suelo común. Cambia el símbolo y cambia el acento; la est
 | `hablecon` | hablecon.app — conversación y voz | `#005278` | `#40B0B8` |
 | `inmplementa` | inmplementa.me — implementación | `#005278` | `#F2A65A` |
 | `reportam` | reportam.me — informes y datos | `#005278` | `#7FBBD8` |
-| `ebanner` | ebanner.me — banners para tiendas VTEX | `#005278` | `#F59331` |
+| `ebanner` | ebanner.me — banners para tiendas VTEX | `#005278` | `#63CB76` |
 | `llmbattle` | llmbattle.dev — comparativa de modelos | `#005278` | `#9B8CFF` |
 | `smlk` | smlk.me — acortador de enlaces | `#005278` | `#CCCCCC` |
 
@@ -105,6 +105,7 @@ plugins/marca-commente/
     assets/tailwind.preset.js          generado
     assets/gerar.mjs                   regenera los dos anteriores desde tokens.json
     assets/svg/                        lockups, ladrillos y la rejilla de construcción
+    assets/mascotes/                   las mascotas, 512×512 con fondo transparente
 ```
 
 ## Desarrollo
@@ -140,12 +141,9 @@ La escala de superficies oscuras y las cuatro reglas del tema oscuro son **propu
 manual de marca cierra solo el `escenario #0B1C26`. Están implementadas en los tokens y
 marcadas como propuesta hasta que se aprueben.
 
-El naranja `#F59331` / `#B85F0E` de ebanner.me también es **propuesta** para la v1.1: el
-manual v1.0 le daba el mismo ámbar de inmplementa.me, y dos marcas definidas no comparten
-acento. Está en los tokens, marcado como propuesta.
-
-Las nueve marcas ya tienen ladrillo y lockup `-light`. Las variantes `-dark` y `-onaccent`
-hoy existen solo para commente.me.
+El inventario de marca está **completo**: las nueve marcas tienen ladrillo y las tres
+variantes de lockup — `-light`, `-dark` y `-onaccent` — y ocho tienen mascota. Falta solo
+la mascota de llmbattle.dev.
 
 ## Contribuir
 

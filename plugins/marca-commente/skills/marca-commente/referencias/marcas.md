@@ -115,21 +115,21 @@ slug `ebanner` · mascote: **pendente** (sem mascote definida)
 | papel | cor | hex |
 |---|---|---|
 | Ladrillo e logotipo | Azul | `#005278` |
-| Acento, ponto sobre azul | Naranja | `#F59331` |
-| Ponto sobre branco | Naranja oscuro | `#B85F0E` |
+| Acento, ponto sobre azul | Verde ebanner | `#63CB76` |
+| Ponto sobre branco | Verde ebanner oscuro | `#2C9145` |
 
 **Tratamento**
 - Sobre branco → logotipo em Azul `#005278`.
 - Sobre cor própria → acento claro: logotipo em Azul `#005278`, **nunca em branco**.
-- Ponto → Naranja oscuro `#B85F0E` no claro · Naranja `#F59331` no escuro.
+- Ponto → Verde ebanner oscuro `#2C9145` no claro · Verde ebanner `#63CB76` no escuro.
 
-⚠️ **O naranja é proposta, para a v1.1.** O manual v1.0 dava a ebanner.me o mesmo ámbar de
-inmplementa.me, porque a marca ainda não estava definida. Com as duas definidas, o acento
-compartilhado deixava as duas indistinguíveis fora do isologo — o naranja separa. Está
-implementado nos tokens e marcado como proposta até a titularidade aprovar.
+O manual v1.0 dava a ebanner.me o mesmo ámbar de inmplementa.me, porque a marca ainda não
+estava definida. Com as duas definidas, o acento compartilhado deixava as duas
+indistinguíveis fora do isologo. O *Design System · Familia* de 17/09/2026 resolveu com o
+verde — que não se confunde com o verde `#40B0B8` de hablecon.app, mais azulado.
 
-O isologo já existe: um marco de banner com um bloco de imagem e três linhas de texto,
-em `assets/svg/icon-ebanner.svg`. O lockup original entregue pelo dono da marca está em
+O isologo é um marco de banner com um bloco de imagem e três linhas de texto, em
+`assets/svg/icon-ebanner.svg`. O lockup original entregue pelo dono da marca está em
 `referencias/ebanner-lockup-original.png`.
 
 ---
@@ -186,8 +186,12 @@ marca. "Distintos ofícios, o mesmo olhar" — cada produto tem uma mascote com 
 | ebanner.me | pendente | — |
 | llmbattle.dev | pendente | — |
 
+As oito mascotes desenhadas estão em `assets/mascotes/<slug>.png` — 512×512, fundo
+transparente. A de ebanner.me já existe, mas o ofício dela segue pendente; llmbattle.dev
+é a única sem arte.
+
 ## Acentos claros, em uma frase
 
 Sobre fundo branco, o ponto quadrado dos acentos claros usa a versão escura:
 gris `#8E9296`, azul claro `#2E86AE`, lavanda `#7A68E6`, ámbar `#D9843A`,
-naranja `#B85F0E`.
+verde ebanner `#2C9145`.

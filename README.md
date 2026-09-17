@@ -4,16 +4,16 @@
 
 Nueve productos comparten un mismo universo: el mismo ladrillo, el mismo logotipo en
 Barlow, un acento propio por producto. Este repositorio lleva ese manual a donde se
-escribe el código — paleta, tipografía, construcción del lockup, temas claro y oscuro y
-los siete usos que rompen el sistema — para que Claude aplique la marca sin que haya que
-repetírselo en cada proyecto. Sirve igual sin Claude: los tokens son CSS, SCSS, JSON y un
-preset de Tailwind.
+escribe el código — paleta, las dos tipografías, construcción del lockup, las nueve
+mascotas y los seis usos que rompen el sistema — para que Claude aplique la marca sin que
+haya que repetírselo en cada proyecto. Sirve igual sin Claude: los tokens son CSS, SCSS,
+JSON y un preset de Tailwind.
 
 [![licencia](https://badgen.net/github/license/zeluizr/commente-design-system?color=005278)](./LICENSE)
 [![último commit](https://badgen.net/github/last-commit/zeluizr/commente-design-system)](https://github.com/zeluizr/commente-design-system/commits)
 [![estrellas](https://badgen.net/github/stars/zeluizr/commente-design-system)](https://github.com/zeluizr/commente-design-system/stargazers)
 
-Versión 1.2.0, según `.claude-plugin/marketplace.json`.
+Versión 2.0.0, según `.claude-plugin/marketplace.json`.
 
 ---
 
@@ -49,8 +49,8 @@ atributo:
 ```
 
 ```html
-<!-- el tema sigue al sistema; data-tema lo fuerza -->
-<html data-marca="llmbattle" data-tema="oscuro">
+<!-- llmbattle.dev es la única marca con superficie propia oscura -->
+<html data-marca="llmbattle" data-superficie="noche">
 ```
 
 Con Tailwind:
@@ -58,7 +58,7 @@ Con Tailwind:
 ```js
 // tailwind.config.js
 module.exports = { presets: [require('./tailwind.preset.js')] }
-// luego: bg-marca-reportam-base, text-azul, bg-escuro-superficie, rounded-ladrillo
+// luego: bg-marca-reportam-base, text-azul, bg-noche, font-display, rounded-ladrillo
 ```
 
 El punto del nombre es un cuadrado, nunca el punto redondo del teclado — es elemento, no
@@ -97,8 +97,8 @@ plugins/marca-commente/
     SKILL.md                           reglas, paleta, superficies, resumen por marca
     referencias/marcas.md              las nueve marcas, una por una
     referencias/lockup.md              geometría: x, radio 22%, símbolo 56%, punto 17%
-    referencias/tema-escuro.md         las dos escalas y las cuatro reglas del oscuro
-    referencias/usos-incorretos.md     los siete errores y la lista de revisión
+    referencias/superficie-noche.md    la noche de llmbattle.dev y sus cuatro reglas
+    referencias/usos-incorretos.md     los seis errores y la lista de revisión
     assets/tokens.json                 fuente de la verdad
     assets/tokens.css                  custom properties, temas y clases de componente
     assets/tokens.scss                 generado
@@ -133,17 +133,19 @@ Para probar el plugin sin publicar, apunte el marketplace a la copia local:
 - Node `>= 18` para el generador. Nada más: no hay dependencias.
 - Claude Code `>= 2.1.239` para declarar el plugin por nombre corto. Sin Claude Code, el
   repositorio funciona igual como biblioteca de tokens.
-- Barlow, de Google Fonts, licencia OFL. Es la única tipografía del universo.
+- Barlow, de Google Fonts, licencia OFL, pesos 700 y 900 — solo logotipo y títulos. El
+  texto va en Arial 400/700, que es de sistema y no se carga.
 
 ## Estado
 
-La escala de superficies oscuras y las cuatro reglas del tema oscuro son **propuesta**: el
-manual de marca cierra solo el `escenario #0B1C26`. Están implementadas en los tokens y
-marcadas como propuesta hasta que se aprueben.
+Manual **v1.2**, septiembre de 2026. **Nada pendiente de decisión.**
 
-El inventario de marca está **completo**: las nueve marcas tienen ladrillo y las tres
-variantes de lockup — `-light`, `-dark` y `-onaccent` — y ocho tienen mascota. Falta solo
-la mascota de llmbattle.dev.
+El sistema tiene un solo tema, claro. La única superficie oscura de la familia es la noche
+`#2C2B40` de llmbattle.dev — color de marca, no tema, y no se presta a los otros ocho
+productos.
+
+El inventario está **completo**: las nueve marcas tienen ladrillo, las tres variantes de
+lockup — `-light`, `-dark` y `-onaccent` — y mascota.
 
 ## Contribuir
 

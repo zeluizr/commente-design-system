@@ -17,11 +17,18 @@ Arquivos prontos para copiar no projeto. Baixados do artifact
 `acessibilidade` (a regra de contraste), que o gerador não deriva mas o `tokens.css`
 aplica.
 
-Mexeu em cor ou marca? Edite **só** `tokens.json` e rode:
+Mexeu em cor ou marca? Edite **só** `tokens.json` e rode o gerador. Ele acha os arquivos
+pela própria pasta, então roda de qualquer lugar:
 
 ```sh
-node ~/.claude/skills/marca-commente/assets/gerar.mjs
+node plugins/marca-commente/skills/marca-commente/assets/gerar.mjs   # na raiz do repositório
+node <pasta-da-skill>/assets/gerar.mjs                               # na skill instalada
 ```
+
+A pasta da skill depende do agente: `~/.claude/skills/marca-commente/` no Claude Code,
+`~/.agents/skills/marca-commente/` ou `.agents/skills/marca-commente/` no Codex. Se ela
+for uma cópia e não um link simbólico, a mudança fica só ali: leve-a de volta ao
+repositório.
 
 `tokens.css` é escrito à mão (tem as classes de componente) — atualize junto.
 

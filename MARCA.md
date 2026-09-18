@@ -22,7 +22,7 @@ elas as aplique **certo**, não para uso livre.
 - Usar qualquer logotipo da família como **sua** marca, ou dentro dela.
 - Sugerir patrocínio, parceria ou endosso que não exista.
 - Alterar os logotipos: recolorir, redesenhar, trocar a tipografia, distorcer, aplicar
-  efeito, ou compor com outra marca. As sete regras de `usos-incorretos.md` valem para
+  efeito, ou compor com outra marca. As seis regras de `usos-incorretos.md` valem para
   todo mundo.
 - Registrar nome, domínio, conta ou aplicativo que se confunda com um produto da família.
 - Vender os arquivos de marca, ou distribuí-los como se fossem de uso livre.

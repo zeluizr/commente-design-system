@@ -1,8 +1,8 @@
 {
   "name": "marca-commente",
   "displayName": "Marca commente.me",
-  "description": "Paleta, tipografia Barlow, construção do lockup, temas claro e escuro e os sete usos proibidos das nove marcas da família commente.me.",
-  "version": "2.0.0",
+  "description": "Paleta, as duas tipografias (Barlow e Arial), construção do lockup, tema único claro com a superfície noche de llmbattle.dev e os seis usos proibidos das nove marcas da família commente.me.",
+  "version": "2.0.1",
   "author": { "name": "Jose Luiz", "url": "https://github.com/zeluizr" },
   "homepage": "https://github.com/zeluizr/commente-design-system",
   "repository": "https://github.com/zeluizr/commente-design-system",

@@ -33,6 +33,31 @@ git clone https://github.com/zeluizr/commente-design-system.git
 cp -R commente-design-system/plugins/marca-commente/skills/marca-commente ~/.claude/skills/
 ```
 
+En Codex y en cualquier agente que lea el formato abierto de Agent Skills, la skill
+funciona tal cual: es una carpeta con `SKILL.md` y rutas relativas, sin nada propio de
+Claude Code. El envoltorio `.claude-plugin/` es lo único que no se lleva. Póngala donde el
+agente busca skills — en Codex, `~/.agents/skills/` para todos los proyectos o
+`.agents/skills/` dentro de uno (versiones antiguas leían `~/.codex/skills/`):
+
+```bash
+git clone https://github.com/zeluizr/commente-design-system.git
+mkdir -p ~/.agents/skills
+ln -s "$PWD/commente-design-system/plugins/marca-commente/skills/marca-commente" ~/.agents/skills/
+```
+
+Con el enlace simbólico, un `git pull` en el clon ya actualiza la skill. El agente la carga
+por la `description` del frontmatter, igual que Claude, o cuando se la nombra en el pedido.
+
+En agentes sin soporte de skills (Cursor, Copilot, Gemini CLI), copie la carpeta al
+proyecto y apúntela desde el `AGENTS.md`:
+
+```markdown
+## Marca
+Todo trabajo de interfaz, color, tipografía, favicon o nombre de producto de la familia
+commente.me sigue `.agents/skills/marca-commente/SKILL.md`. Léalo antes de empezar y
+consulte `referencias/` cuando el SKILL.md lo indique.
+```
+
 Solo los tokens, sin Claude: copie `plugins/marca-commente/skills/marca-commente/assets/`
 a su proyecto.
 
